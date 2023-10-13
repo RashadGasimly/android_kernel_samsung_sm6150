@@ -32,6 +32,13 @@ config IOSCHED_ROW
 	  according to queue priority.
 	  Most suitable for mobile devices.
 
+config IOSCHED_SIO
+        tristate "SIO I/O scheduler"
+        --help--
+          The  SIO I/O scheduler does not do any kind of sorting, as it is aimed for
+          aleatory access devices, but it does some basic merging. We try to
+          keep minimum overhead to achieve low latency.
+
 config IOSCHED_CFQ
 	tristate "CFQ I/O scheduler"
 	default y
